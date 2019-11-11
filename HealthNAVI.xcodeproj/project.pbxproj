@@ -12,6 +12,7 @@
 		1D46ADC12378D91600863F5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D46ADBF2378D91600863F5A /* Main.storyboard */; };
 		1D46ADC32378D91700863F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D46ADC22378D91700863F5A /* Assets.xcassets */; };
 		1D46ADC62378D91700863F5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D46ADC42378D91700863F5A /* LaunchScreen.storyboard */; };
+		1D46ADD02378DF2A00863F5A /* AVInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D46ADCF2378DF2A00863F5A /* AVInputViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		1D46ADC22378D91700863F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D46ADC52378D91700863F5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D46ADC72378D91700863F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D46ADCD2378DF2A00863F5A /* HealthNAVI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HealthNAVI-Bridging-Header.h"; sourceTree = "<group>"; };
+		1D46ADCE2378DF2A00863F5A /* AVInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVInputViewController.h; sourceTree = "<group>"; };
+		1D46ADCF2378DF2A00863F5A /* AVInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVInputViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,33 @@
 		1D46ADBA2378D91600863F5A /* HealthNAVI */ = {
 			isa = PBXGroup;
 			children = (
+				1D46ADCD2378DF2A00863F5A /* HealthNAVI-Bridging-Header.h */,
 				1D46ADBB2378D91600863F5A /* AppDelegate.swift */,
-				1D46ADBD2378D91600863F5A /* ViewController.swift */,
-				1D46ADBF2378D91600863F5A /* Main.storyboard */,
+				1D46ADD22378DF4400863F5A /* Controllers */,
+				1D46ADD12378DF3E00863F5A /* Views */,
 				1D46ADC22378D91700863F5A /* Assets.xcassets */,
-				1D46ADC42378D91700863F5A /* LaunchScreen.storyboard */,
 				1D46ADC72378D91700863F5A /* Info.plist */,
 			);
 			path = HealthNAVI;
+			sourceTree = "<group>";
+		};
+		1D46ADD12378DF3E00863F5A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D46ADBF2378D91600863F5A /* Main.storyboard */,
+				1D46ADC42378D91700863F5A /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D46ADD22378DF4400863F5A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D46ADBD2378D91600863F5A /* ViewController.swift */,
+				1D46ADCE2378DF2A00863F5A /* AVInputViewController.h */,
+				1D46ADCF2378DF2A00863F5A /* AVInputViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +119,7 @@
 				TargetAttributes = {
 					1D46ADB72378D91600863F5A = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -136,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D46ADBE2378D91600863F5A /* ViewController.swift in Sources */,
+				1D46ADD02378DF2A00863F5A /* AVInputViewController.m in Sources */,
 				1D46ADBC2378D91600863F5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +307,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6TQ593XJY7;
 				INFOPLIST_FILE = HealthNAVI/Info.plist;
@@ -291,6 +317,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ArkrayPHM.HealthNAVI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HealthNAVI/HealthNAVI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -300,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6TQ593XJY7;
 				INFOPLIST_FILE = HealthNAVI/Info.plist;
@@ -309,6 +338,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ArkrayPHM.HealthNAVI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HealthNAVI/HealthNAVI-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
